@@ -19,7 +19,7 @@ import spinner from "./assets/Gear@1.5x-0.2s-200px-200px.svg";
 function App() {
   const cart = useAppSelector((state) => state.cart);
   const Dispatch = useAppDispatch();
-  const { data, isLoading, error } = useFetch(
+  const { data, isLoading} = useFetch(
     "https://fakestoreapi.com/products"
   );
 

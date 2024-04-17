@@ -2,12 +2,10 @@ import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { mapData } from "../App";
 import { removeFromCart } from "../redux/counterSlice";
 import CartCard from "../components/CartCard";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import cartImg from "../assets/cart.668e6453.svg"
 
 export default function Cart() {
-  const [totalCart, setTotalCart] = useState(0);
   const cart: mapData[] = useAppSelector((state) => state.cart);
   const Dispatch = useAppDispatch();
 

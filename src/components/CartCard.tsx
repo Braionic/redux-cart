@@ -1,7 +1,6 @@
-import React from "react";
+
 import { mapData } from "../App";
 import { useAppSelector } from "../redux/hooks";
-import { useLocation } from "react-router-dom";
 import { MdDeleteOutline } from "react-icons/md";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
@@ -66,8 +65,8 @@ export default function CartCard({
         </button>
         
         <div className="flex">
-        <div className="bg-orange-500 p-2 rounded bg-orange-400 text-white cursor-pointer"><FaMinus size={18} /></div><span className="px-4">{0}</span>
-        <div className="bg-orange-500 p-2 rounded bg-orange-400 text-white cursor-pointer"><FaPlus size={18} /></div>
+        <div className=" p-2 rounded bg-orange-400 text-white cursor-pointer"><FaMinus size={18} /></div><span className="px-4">{0}</span>
+        <div className="p-2 rounded bg-orange-400 text-white cursor-pointer"><FaPlus size={18} /></div>
         </div>
       </div>
     </div>

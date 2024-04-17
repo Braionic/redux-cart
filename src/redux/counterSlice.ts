@@ -1,25 +1,32 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from './store'
+import { mapData } from '../App';
 
 // Define a type for the slice state
 
-// Define the initial state using that type
+interface lpp {
+  id: number;
+}
+export interface CounterState {
+  initialState?: lpp[]
+}
 
+// Define the initial state using that type
+const initialState: mapData[] = []
 export const cartSlice = createSlice({
   name: 'cart',
   // `createSlice` will infer the state type from the `initialState` argument
-  initialState: [],
+  initialState,
   reducers: {
     addToCart: (state: RootState, action)=>{
       console.log(action.payload)
       state.push(action.payload)
     },
     removeFromCart: (state: RootState, action)=>{
-return state.filter((product: {id: number})=>{
-return product.id !== action.payload
+      return state.filter((product: {id: number})=>{
+      return product.id !== action.payload
 })
-    }
+    },
   },
 })
 

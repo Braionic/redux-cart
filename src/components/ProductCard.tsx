@@ -1,7 +1,6 @@
-import React from "react";
+
 import { mapData } from "../App";
 import { useAppSelector } from "../redux/hooks";
-import { useLocation } from "react-router-dom";
 
 //Item interface for mapped items
 interface itemInterface {
@@ -11,15 +10,18 @@ interface itemInterface {
     title: string;
     image: string;
     price: number;
-  },
+  };
 
   //handleclicl type declaration for both add and remove function
-  handleAdd?: (id: mapData)=> void,
-  handleRemove: (id: number)=> void
+  handleAdd?: (id: mapData) => void;
+  handleRemove: (id: number) => void;
 }
 
-
-export default function ProductCard({ item, handleAdd, handleRemove }: itemInterface) {
+export default function ProductCard({
+  item,
+  handleAdd,
+  handleRemove,
+}: itemInterface) {
   const cart = useAppSelector((state) => state.cart);
   return (
     <div key={item.id} className="p-3 border border-1 rounded my-4 bg-gray-100">
