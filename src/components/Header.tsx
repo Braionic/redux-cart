@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useAppSelector } from "../redux/hooks";
